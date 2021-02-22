@@ -4,6 +4,9 @@ import { readdir, readdirSync } from 'fs';
 import { Command, Event, Config } from '../Interfaces';
 import ConfigJson from '../config.json';
 
+import * as dotenv from 'dotenv';
+dotenv.config();
+
 class ExtendedClient extends Client {
     public commands: Collection<string, Command> = new Collection();
     public events: Collection<string, Event> = new Collection();
@@ -11,7 +14,7 @@ class ExtendedClient extends Client {
     public aliases: Collection<string, Command> = new Collection();
 
     public async init() {
-        this.login(this.config.token);
+        this.login(process.env.TOKEN);
 
         const commandPath = path.join(__dirname, '..', 'Commands');
         readdirSync(commandPath).forEach((dir) => {
