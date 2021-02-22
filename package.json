@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "tsc && node dist/index.js"
+    "start": "ts-node-dev --respawn --transpile-only --poll ./src/index.ts"
   },
   "repository": {
     "type": "git",
