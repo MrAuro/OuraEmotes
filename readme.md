@@ -11,7 +11,7 @@
 </p>
 
 ## About
-**If you want this bot in your server, you can invite it [here](https://discord.com/oauth2/authorize?client_id=761088567010394142&scope=bot&permissions=1073741824)**
+## **If you want this bot in your server, you can invite it [here](https://discord.com/oauth2/authorize?client_id=761088567010394142&scope=bot&permissions=1073741824)**
 
 If you find a bug, report it at the [issues tab](https://github.com/MrAuro/OuraEmotes/issues) and if you want to contribute to the bot, create a [pull request!](https://github.com/MrAuro/OuraEmotes/pulls)
 
@@ -41,6 +41,26 @@ Aliases: `invite` / `i`
 
 Sends the invite link for the bot
 
+#### help
+`!help`
+
+Aliases: `help`
+
+Returns help on the bot
+
+#### commands
+`!commands`
+
+Aliases: `commands`
+
+Returns a list of commands
+
+#### github
+`!github`
+
+Aliases: `github` / `gh`
+
+Returns a link to the GitHub repository
 </details>
 
 ---
