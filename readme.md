@@ -23,12 +23,23 @@ If you find a bug, report it at the [issues tab](https://github.com/MrAuro/OuraE
 #### ping
 `!ping`
 
+Aliases: `ping` / `p`
+
 Ping the bot
 
 #### addemote
 `!addemote <BTTV/FFZ/Image Link> <Emote Name>`
 
+Aliases: `addemote` / `ae`
+
 Add an emote to the Discord Server
+
+#### invite
+`!invite`
+
+Aliases: `invite` / `i`
+
+Sends the invite link for the bot
 
 </details>
 
