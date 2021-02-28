@@ -61,6 +61,13 @@ Returns a list of commands and a link to the repo's readme
 Aliases: `github` / `gh`
 
 Returns a link to the GitHub repository
+
+#### version
+`!version`
+
+Aliases: `v`
+
+Returns the current git commit hash
 </details>
 
 ---
