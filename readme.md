@@ -53,7 +53,7 @@ Returns help on the bot
 
 Aliases: `commands`
 
-Returns a list of commands
+Returns a list of commands and a link to the repo's readme
 
 #### github
 `!github`
