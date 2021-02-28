@@ -6,6 +6,10 @@ export const event: Event = {
         require('child_process').exec('git rev-parse --short HEAD', function(err, stdout) {
             console.log(`${client.user.username} is online in ${client.guilds.cache.size} servers on commit ${stdout}`);
         });
+
+        client.user.setActivity("$invite | $help", {
+            type: "PLAYING",
+          });
         
     }
 }
