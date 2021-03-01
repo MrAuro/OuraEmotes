@@ -13,27 +13,27 @@ export const command: Command = {
                 {
                     // @ts-ignore ---- for some reason typescript doesnt like this, but the bot still works fine
                     name: 'addemote',
-                    value: '`!addemote <BTTV/FFZ/Image Link> <Emote Name>`\nAdd a emote to the server`',
+                    value: '`$addemote <BTTV/FFZ/Image Link> <Emote Name>`\nAdd a emote to the server`',
                     inline: 'true',
                 },
                 {
                     name: 'ping',
-                    value: '`!ping`\nPing the bot for its latency`',
+                    value: '`$ping`\nPing the bot for its latency`',
                     inline: 'true',
                 },
                 {
                     name: 'help',
-                    value: '`!help`\nReturns help on the bot`',
+                    value: '`$help`\nReturns help on the bot`',
                     inline: 'true',
                 },
                 {
                     name: 'invite',
-                    value: '`!invite`\nReturns the invite link`',
+                    value: '`$invite`\nReturns the invite link`',
                     inline: 'true',
                 },
                 {
-                    name: 'ping',
-                    value: '`!ping`\nPing the bot for its latency`',
+                    name: 'commands',
+                    value: '`$guilds\nReturns how many servers the bot is currently in`',
                     inline: 'true',
                 },
             )

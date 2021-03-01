@@ -68,6 +68,13 @@ Returns a link to the GitHub repository
 Aliases: `v`
 
 Returns the current git commit hash
+
+#### guilds
+`!guilds`
+
+Aliases: `servers`
+
+Returns the number of guilds the bot is currently in
 </details>
 
 ---
