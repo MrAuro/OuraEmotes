@@ -7,7 +7,9 @@ export const command: Command = {
     name: 'addemote',
     aliases: ['ae'],
     run: async (client, message, args) => {
-        console.table(args);
+        if(!message.guild.me.hasPermission("MANAGE_EMOJIS")) return message.channel.send(`I do not have the permission to Manage Emojis. Learn how to give me permission here: <https://mrauro.github.io/OuraEmotes/perms>`)
+
+        // https://mrauro.github.io/OuraEmotes/perms
         if(!args[0]) return message.channel.send(`Please provide a url`);
         if(!args[1]) return message.channel.send(`Please provide an emote name`);
         if (!validURL(args[0])) return message.channel.send(`The first argument you provided is not a valid URL`);
