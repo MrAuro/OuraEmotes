@@ -9,7 +9,7 @@ export const command: Command = {
         .setColor("#66B66E")
         .setTitle(`Invite me to your server!`)
         .setURL("https://discord.com/oauth2/authorize?client_id=761088567010394142&scope=bot&permissions=1073741824")
-        .setDescription("Add this bot to your own server!")
+        .setDescription("Add BetterTTV/FFZ Emotes directly to your Discord Server")
         .setTimestamp()
         .setFooter(
           `Requested by ${message.author.username}`

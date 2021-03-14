@@ -136,8 +136,7 @@ function validEmoteName(emoteName: string) {
  * @return {boolean}      is the argument a valid url
  */
 function validURL(url: string) {
-    // http://urlregex.com/
-    if (/(http|ftp|https):\/\/([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:/~+#-]*[\w@?^=%&/~+#-])?/.test(url)) {
+    if (/(http|https):\/\/([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:/~+#-]*[\w@?^=%&/~+#-])?/.test(url)) {
         return true;
     } else {
         return false;
