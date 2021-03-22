@@ -75,6 +75,13 @@ Returns the current git commit hash
 Aliases: `servers`
 
 Returns the number of guilds the bot is currently in
+
+#### eval
+`!eval <code>`
+
+Aliases: `eval`
+
+Evaluates code, user ID must match config.ownerID
 </details>
 
 ---
