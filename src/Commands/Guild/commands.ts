@@ -8,7 +8,7 @@ export const command: Command = {
         const helpEmbed = new Discord.MessageEmbed()
             .setColor('#5CFF35')
             .setTitle('Commands')
-            .setDescription('You can view a more detailed list of the commands [here](https://github.com/MrAuro/OuraEmotes#commands)')
+            .setDescription('You can view a more detailed list of the commands [here](https://github.com/MrAuro/OuraEmotes#commands). All commands have a 5 second cooldown to prevent spam.')
             .addFields(
                 {
                     // @ts-ignore ---- for some reason typescript doesnt like this, but the bot still works fine
