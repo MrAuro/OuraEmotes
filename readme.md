@@ -17,6 +17,7 @@ If you find a bug, report it at the [issues tab](https://github.com/MrAuro/OuraE
 
 ---
 ## Commands
+All commands have a 5 second cooldown to prevent spam.
 <details>
 <summary>Commands</summary>
 
