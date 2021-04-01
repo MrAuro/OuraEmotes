@@ -33,7 +33,7 @@ export const command: Command = {
                 },
                 {
                     name: `🧠 Memory Usage`,
-                    value: `${((siData.mem.free / siData.mem.total * 100).toFixed(1))}% of ${formatBytes(os.totalmem())}`,
+                    value: `${formatBytes(os.freemem())} of ${formatBytes(os.totalmem())}`,
                     inline: true
                 },
                 {
