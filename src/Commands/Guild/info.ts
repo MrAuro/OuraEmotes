@@ -15,7 +15,6 @@ export const command: Command = {
         }
 
         let siData = await si.get(valueObject);
-        console.log(siData);
 
         const inviteEmbed = new Discord.MessageEmbed()
             .setColor('#66B66E')
