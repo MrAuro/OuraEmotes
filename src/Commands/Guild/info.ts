@@ -9,6 +9,7 @@ export const command: Command = {
     run: async (client, message, args) => {
         let valueObject = {
             cpu: 'manufacturer, brand, cores, physicalCores',
+            mem: 'total, free',
             cpuCurrentSpeed: 'avg',
             cpuTemperature: 'main',
             osInfo: 'platform'
@@ -32,7 +33,7 @@ export const command: Command = {
                 },
                 {
                     name: `🧠 Memory Usage`,
-                    value: `${((os.freemem() / os.totalmem()) * 100).toFixed(1)}% of ${formatBytes(os.totalmem())}`,
+                    value: `${((siData.mem.free / siData.mem.total * 100).toFixed(1))}% of ${formatBytes(os.totalmem())}`,
                     inline: true
                 },
                 {
@@ -41,11 +42,11 @@ export const command: Command = {
                 },
                 {
                     name: `🔢 CPU Cores`,
-                    value: `${siData.cpu.cores} and ${siData.cpu.physicalCores} physical cores at ${siData.cpuCurrentSpeed.avg}GHz`
+                    value: `${siData.cpu.cores} cores and ${siData.cpu.physicalCores} physical cores at ${siData.cpuCurrentSpeed.avg}GHz`
                 },
                 {
                     name: `🔥 CPU Tempurature`,
-                    value: `${siData.cpuTemperature.main}`
+                    value: `${siData.cpuTemperature.main}°C`
                 }
             )
             .setTimestamp()
