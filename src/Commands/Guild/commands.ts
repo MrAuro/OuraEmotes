@@ -36,6 +36,11 @@ export const command: Command = {
                     value: '`$guilds\nReturns how many servers the bot is currently in`',
                     inline: 'true',
                 },
+                {
+                    name: 'info',
+                    value: '`$info\nReturns information on the system like CPU, OS, and MEM`',
+                    inline: 'true',
+                },
             )
             .setTimestamp()
             .setFooter(`Requested by ${message.author.username}`);

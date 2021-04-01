@@ -83,6 +83,13 @@ Returns the number of guilds the bot is currently in
 Aliases: `eval`
 
 Evaluates code, user ID must match config.ownerID
+
+#### info
+`!info`
+
+Aliases: `info`
+
+Returns information on the system like CPU, OS, and MEM
 </details>
 
 ---
