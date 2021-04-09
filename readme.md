@@ -35,6 +35,13 @@ Aliases: `addemote` / `ae`
 
 Add an emote to the Discord Server
 
+#### removeemote
+`!removeemote <emote>`
+
+Aliases: `removeemote` / `remove` / `deleteemote` / `delete`
+
+Removes an emote from the Discord Server
+
 #### invite
 `!invite`
 
