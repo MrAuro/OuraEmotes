@@ -1,6 +1,6 @@
 <h1 align="center">OuraEmotes</h1>
 
-<h3 align="center">A Discord.JS bot that lets you add BTTV/FFZ Emotes directly to your server</h3>
+<h3 align="center">A Verified Discord Bot that lets you add BetterTTV, FrankerFaceZ, or URLs directly to your server</h3>
 
 <p align="center">
   <a href="#about">About</a>
@@ -11,7 +11,7 @@
 </p>
 
 ## About
-## **If you want this bot in your server, you can invite it [here](https://discord.com/oauth2/authorize?client_id=761088567010394142&scope=bot&permissions=1073741824)**
+## **If you want this bot in your server, you can invite the verified bot [here](https://discord.com/oauth2/authorize?client_id=761088567010394142&scope=bot&permissions=1073741824)**
 
 If you find a bug, report it at the [issues tab](https://github.com/MrAuro/OuraEmotes/issues) and if you want to contribute to the bot, create a [pull request!](https://github.com/MrAuro/OuraEmotes/pulls)
 
@@ -29,7 +29,7 @@ Aliases: `ping` / `p`
 Ping the bot
 
 #### addemote
-`!addemote <BTTV/FFZ/Image Link> <Emote Name>`
+`!addemote <BTTV/FFZ/Image Link/Attachment> <Emote Name>`
 
 Aliases: `addemote` / `ae`
 
