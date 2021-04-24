@@ -13,7 +13,7 @@ export const command: Command = {
                 {
                     // @ts-ignore ---- for some reason typescript doesnt like this, but the bot still works fine
                     name: 'addemote',
-                    value: '`$addemote <BTTV/FFZ/Image Link> <Emote Name>`\nAdd a emote to the server',
+                    value: '`$addemote <BTTV/FFZ/Image Link/Attachment> <Emote Name>`\nAdd a emote to the server',
                     inline: 'true',
                 },
                 {
