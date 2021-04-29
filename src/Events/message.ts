@@ -2,13 +2,24 @@ import { Event, Command } from '../Interfaces';
 import { Message } from 'discord.js';
 
 const talkedRecently = new Set();
+const escapeRegex = (str: string) => {
+    return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+};
 
 export const event: Event = {
     name: 'message',
     run: (client, message: Message) => {
-        if (message.author.bot || !message.guild || !message.content.startsWith(client.config.prefix)) return;
+        // Check if the message is either from a bot or a DM
+        if (message.author.bot || !message.guild) return;
 
-        const args = message.content.slice(client.config.prefix.length).trim().split(/ +/g);
+        // Check if prefix is either @bot or client.config.prefix
+        // https://discordjs.guide/popular-topics/faq.html#how-do-i-add-a-mention-prefix-to-my-bot
+        const prefixRegex = new RegExp(`^(<@!?${client.user.id}>|${escapeRegex(client.config.prefix)})\\s*`);
+        if(!prefixRegex.test(message.content)) return;
+
+        const [, matchedPrefix] = message.content.match(prefixRegex);
+
+        const args = message.content.slice(matchedPrefix.length).trim().split(/ +/g);
 
         const cmd = args.shift().toLowerCase();
         if (!cmd) return;

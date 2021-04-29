@@ -7,9 +7,9 @@ export const event: Event = {
             console.log(`${client.user.username} is online in ${client.guilds.cache.size} servers on commit ${stdout}`);
         });
 
-        client.user.setActivity("$invite | $help", {
-            type: "PLAYING",
-          });
+        client.user.setPresence({
+            activity: { type: 'WATCHING', name: 'for $help'}
+        })
         
     }
 }
