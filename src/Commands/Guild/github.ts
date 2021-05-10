@@ -1,10 +1,10 @@
 import { Command } from '../../Interfaces';
 import * as Discord from 'discord.js';
 
-export const command: Command = { 
+export const command: Command = {
     name: 'github',
     aliases: ['gh'],
-    run: async(client, message, args) => {
+    run: async (client, message, args) => {
         const ghEmbed = new Discord.MessageEmbed()
             .setColor('#5CFF35')
             .setTitle('Github Repository')
@@ -12,5 +12,5 @@ export const command: Command = {
             .setTimestamp()
             .setFooter(`Requested by ${message.author.username}`);
         message.channel.send(ghEmbed);
-    }    
-}
+    },
+};

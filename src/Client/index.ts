@@ -38,7 +38,7 @@ class ExtendedClient extends Client {
             this.events.set(event.name, event);
             console.log(event);
             this.on(event.name, event.run.bind(null, this));
-        })
+        });
     }
 }
 

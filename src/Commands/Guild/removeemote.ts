@@ -13,11 +13,14 @@ export const command: Command = {
         if (args[0].match(re)) {
             let guildEmote = message.guild.emojis.cache.find((emote) => emote.id === re.exec(args[0])[0].split(':')[2].slice(0, -1));
             if (!guildEmote) return message.channel.send('Your first argument is not a valid guild emote');
-            guildEmote.delete().then((emote) => {
-                message.channel.send(`**Sucess!**\nThe emote \`${emote.name}\` has been removed!`);
-            }).catch(err => {
-                message.channel.send(`**Error:** ${err}`);
-            });
+            guildEmote
+                .delete()
+                .then((emote) => {
+                    message.channel.send(`**Sucess!**\nThe emote \`${emote.name}\` has been removed!`);
+                })
+                .catch((err) => {
+                    message.channel.send(`**Error:** ${err}`);
+                });
         } else {
             return message.channel.send('Your first argument is not a valid guild emote');
         }
