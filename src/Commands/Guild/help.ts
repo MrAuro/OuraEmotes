@@ -8,7 +8,9 @@ export const command: Command = {
         const helpEmbed = new Discord.MessageEmbed()
             .setColor('#5CFF35')
             .setTitle('BTTV Emote Bot')
-            .setDescription(`You can either @ the bot, or use the ${client.config.prefix} prefix to use commands.\nUse the \`$commands\` command to view all of the commands! All commands have a 5 second cooldown to prevent spam.`)
+            .setDescription(
+                `You can either @ the bot, or use the ${client.config.prefix} prefix to use commands.\nUse the \`$commands\` command to view all of the commands! All commands have a 5 second cooldown to prevent spam.`
+            )
             .addFields(
                 {
                     // @ts-ignore ---- for some reason typescript doesnt like this, but the bot still works fine

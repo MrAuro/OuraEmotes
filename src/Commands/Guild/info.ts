@@ -12,8 +12,8 @@ export const command: Command = {
             mem: 'total, free',
             cpuCurrentSpeed: 'avg',
             cpuTemperature: 'main',
-            osInfo: 'platform'
-        }
+            osInfo: 'platform',
+        };
 
         let siData = await si.get(valueObject);
 
@@ -29,24 +29,24 @@ export const command: Command = {
                 {
                     name: `⏰ Server Uptime`,
                     value: `${Math.round(os.uptime() / 60)} minutes`,
-                    inline: true
+                    inline: true,
                 },
                 {
                     name: `🧠 Memory Usage`,
                     value: `${formatBytes(os.freemem())} of ${formatBytes(os.totalmem())}`,
-                    inline: true
+                    inline: true,
                 },
                 {
                     name: `⏳ CPU Information`,
-                    value: `${siData.cpu.manufacturer} ${siData.cpu.brand}`
+                    value: `${siData.cpu.manufacturer} ${siData.cpu.brand}`,
                 },
                 {
                     name: `🔢 CPU Cores`,
-                    value: `${siData.cpu.cores} cores and ${siData.cpu.physicalCores} physical cores at ${siData.cpuCurrentSpeed.avg}GHz`
+                    value: `${siData.cpu.cores} cores and ${siData.cpu.physicalCores} physical cores at ${siData.cpuCurrentSpeed.avg}GHz`,
                 },
                 {
                     name: `🔥 CPU Tempurature`,
-                    value: `${siData.cpuTemperature.main}°C`
+                    value: `${siData.cpuTemperature.main}°C`,
                 }
             )
             .setTimestamp()

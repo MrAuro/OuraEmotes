@@ -45,7 +45,7 @@ export const command: Command = {
                     name: 'info',
                     value: '`$info`\nReturns information on the system like CPU, OS, and MEM',
                     inline: 'true',
-                },
+                }
             )
             .setTimestamp()
             .setFooter(`Requested by ${message.author.username}`);

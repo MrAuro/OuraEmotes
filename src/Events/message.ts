@@ -15,7 +15,7 @@ export const event: Event = {
         // Check if prefix is either @bot or client.config.prefix
         // https://discordjs.guide/popular-topics/faq.html#how-do-i-add-a-mention-prefix-to-my-bot
         const prefixRegex = new RegExp(`^(<@!?${client.user.id}>|${escapeRegex(client.config.prefix)})\\s*`);
-        if(!prefixRegex.test(message.content)) return;
+        if (!prefixRegex.test(message.content)) return;
 
         const [, matchedPrefix] = message.content.match(prefixRegex);
 
