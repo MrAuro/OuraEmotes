@@ -3,6 +3,8 @@ import { Command } from '../../Interfaces';
 export const command: Command = {
     name: 'eval',
     aliases: ['e'],
+    description: 'Evaluates code',
+    usage: '$eval <Code>',
     run: async (client, message, args) => {
         if (message.author.id !== client.config.ownerID) return;
         try {

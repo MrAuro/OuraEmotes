@@ -5,6 +5,8 @@ import * as childprocess from 'child_process';
 export const command: Command = {
     name: 'version',
     aliases: ['v'],
+    description: 'Shows the current commit the bot is on',
+    usage: '$version',
     run: async (client, message, args) => {
         childprocess.exec('git rev-parse HEAD', function (err, stdout) {
             console.table(process.versions.modules);

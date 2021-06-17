@@ -4,6 +4,8 @@ import * as Discord from 'discord.js';
 export const command: Command = {
     name: 'help',
     aliases: [],
+    description: 'Returns help and information about the bot',
+    usage: '$help',
     run: async (client, message, args) => {
         const helpEmbed = new Discord.MessageEmbed()
             .setColor('#5CFF35')

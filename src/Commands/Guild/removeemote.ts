@@ -3,6 +3,8 @@ import { Command } from '../../Interfaces';
 export const command: Command = {
     name: 'removeemote',
     aliases: ['remove', 'deleteemote', 'delete'],
+    description: 'Removes an emote from the server',
+    usage: '$removeemote <Emote>',
     run: async (client, message, args) => {
         if (!message.guild.me.hasPermission('MANAGE_EMOJIS'))
             return message.channel.send(`I do not have the permission to Manage Emojis. Learn how to give me permission here: <https://mrauro.github.io/OuraEmotes/perms>`);
