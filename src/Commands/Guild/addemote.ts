@@ -78,6 +78,34 @@ export const command: Command = {
                     `https://cdn.7tv.app/emote/${args[0].split('/')[4]}/1x`,
                 ];
                 uploadEmote(urlArr, args[1]);
+            } else {
+                message.guild.emojis
+                    .create(args[0], args[1])
+                    .then((emote) => {
+                        message.channel.send(`**Sucess!\n**The emote ${client.emojis.cache.get(emote.id)} has been added!`);
+                    })
+                    .catch((err) => {
+                        if (err.code === 'ETIMEDOUT') {
+                            return message.channel.send(`The specified URL timed out.`);
+                        } else if (err.name === 'DiscordAPIError') {
+                            // check if the error INCLUDES this string, becuase the emote cap changes from guild to guild based on boosts
+                            if (err.message.includes('Maximum number of emojis reached')) {
+                                return message.channel.send(`This server has reached the maximum emote cap.`);
+                            } else if (err.message.includes('256.0 kb')) {
+                                return message.channel.send(`The file provided at the URL is too large (max 256 kb)`);
+                            } else if (err.message.includes('Invalid image data')) {
+                                return message.channel.send(`The specified URL does not have valid image data`);
+                            } else {
+                                var ownerID = client.users.cache.get(process.env.OWNERID);
+                                ownerID.send(`DiscordAPI Error:\n\`${err.name} ${err.message}\`\n\nURL Provided: \`${args[0]}\` with the emote name of \`${args[1]}\` in ${message.guild.name}`);
+                                return message.channel.send(`There was an error with the DiscordAPI. If this persists, please create an issue (\`$github\`)`);
+                            }
+                        } else {
+                            var ownerID = client.users.cache.get(process.env.OWNERID);
+                            ownerID.send(`Unknown Error:\n\`${err.name} ${err.message}\`\n\nURL Provided: \`${args[0]}\` with the emote name of \`${args[1]}\` in ${message.guild.name}`);
+                            return message.channel.send(`There was an unknown error.`);
+                        }
+                    });
             }
         }
 
