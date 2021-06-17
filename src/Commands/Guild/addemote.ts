@@ -6,9 +6,13 @@ dotenv.config();
 export const command: Command = {
     name: 'addemote',
     aliases: ['ae'],
+    description: 'Add an emote to the server',
+    usage: `$addemote <BTTV/FFZ/Image Link/Attachment> <Emote Name>`,
     run: async (client, message, args) => {
         if (!message.guild.me.hasPermission('MANAGE_EMOJIS'))
             return message.channel.send(`I do not have the permission to Manage Emojis. Learn how to give me permission here: <https://mrauro.github.io/OuraEmotes/perms>`);
+
+        if (!message.member.hasPermission('MANAGE_EMOJIS')) return message.channel.send(`You do not have permission to Manage Emojis.`);
 
         // Check if the message has at least 1 attachment
         if (message.attachments.size > 0) {

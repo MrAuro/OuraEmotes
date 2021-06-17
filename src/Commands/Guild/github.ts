@@ -4,6 +4,8 @@ import * as Discord from 'discord.js';
 export const command: Command = {
     name: 'github',
     aliases: ['gh'],
+    description: 'Returns the GitHub repository',
+    usage: '$github',
     run: async (client, message, args) => {
         const ghEmbed = new Discord.MessageEmbed()
             .setColor('#5CFF35')

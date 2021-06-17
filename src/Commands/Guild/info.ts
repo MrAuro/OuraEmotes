@@ -6,6 +6,8 @@ import * as si from 'systeminformation';
 export const command: Command = {
     name: 'info',
     aliases: [],
+    description: 'Returns various information about the server',
+    usage: '$info',
     run: async (client, message, args) => {
         let valueObject = {
             cpu: 'manufacturer, brand, cores, physicalCores',
