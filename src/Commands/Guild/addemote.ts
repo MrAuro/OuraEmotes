@@ -205,6 +205,7 @@ export const command: Command = {
  * @return {boolean}      does the emote work as an emote name
  */
 function validEmoteName(emoteName: string): boolean {
+    if (!emoteName) return false;
     if (/^[a-zA-Z0-9_]*$/.test(emoteName)) {
         return true;
     } else {
