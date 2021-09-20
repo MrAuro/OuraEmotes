@@ -377,10 +377,10 @@ strip-json-comments@^2.0.0:
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
   integrity sha1-PFMZQukIwml8DsNEhYwobHygpgo=
 
-systeminformation@^5.6.20:
-  version "5.6.20"
-  resolved "https://registry.yarnpkg.com/systeminformation/-/systeminformation-5.6.20.tgz#f4a5a09820c6f5b8f9f10f15269e4dfeded51620"
-  integrity sha512-rSnsnnY5Xtl7avVb8ebuSiEWtissFGyWN+5HufmLHKlmS60SDOU5V4YBr69Bx7jSiievXH9B6x6SGnoqtA2mgQ==
+systeminformation@^5.9.3:
+  version "5.9.3"
+  resolved "https://registry.yarnpkg.com/systeminformation/-/systeminformation-5.9.3.tgz#d247c3fc27dc51787af28f0b4a0d82f9bce7f88b"
+  integrity sha512-FmifqCPDU5uJZeORt1jCiATBTHwpX7luDzeFo8lojYbEiJk6oR3mtAZBOayCo3iEmgSILzmbcO855OXPHCeU+g==
 
 to-regex-range@^5.0.1:
   version "5.0.1"
