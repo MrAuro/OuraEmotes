@@ -1,6 +1,6 @@
 <h1 align="center">OuraEmotes</h1>
 
-<h3 align="center">A Verified Discord Bot that lets you add BetterTTV, FrankerFaceZ, or URLs directly to your server</h3>
+<h3 align="center">A Verified Discord Bot that lets you add BetterTTV, FrankerFaceZ, SevenTV, or image URLs directly to your server</h3>
 
 <p align="center">
   <a href="#about">About</a>
