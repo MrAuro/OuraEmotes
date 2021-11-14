@@ -25,7 +25,7 @@ export const command: Command = {
             message.guild.emojis
                 .create(message.attachments.first().url, args[0])
                 .then((emote) => {
-                    message.channel.send(`**Sucess!\n**The emote ${client.emojis.cache.get(emote.id)} has been added!`);
+                    message.channel.send(`**Success!\n**The emote ${client.emojis.cache.get(emote.id)} has been added!`);
                 })
                 .catch((err) => {
                     if (err.code === 'ETIMEDOUT') {
@@ -82,7 +82,7 @@ export const command: Command = {
                 message.guild.emojis
                     .create(args[0], args[1])
                     .then((emote) => {
-                        message.channel.send(`**Sucess!\n**The emote ${client.emojis.cache.get(emote.id)} has been added!`);
+                        message.channel.send(`**Success!\n**The emote ${client.emojis.cache.get(emote.id)} has been added!`);
                     })
                     .catch((err) => {
                         if (err.code === 'ETIMEDOUT') {
@@ -113,7 +113,7 @@ export const command: Command = {
             message.guild.emojis
                 .create(url[0], name)
                 .then((emote) => {
-                    message.channel.send(`**Sucess!\n**The emote ${client.emojis.cache.get(emote.id)} has been added!`);
+                    message.channel.send(`**Success!\n**The emote ${client.emojis.cache.get(emote.id)} has been added!`);
                 })
                 .catch((err) => {
                     if (err.code === 'ETIMEDOUT') {
@@ -126,7 +126,7 @@ export const command: Command = {
                             message.guild.emojis
                                 .create(url[1], name)
                                 .then((emote) => {
-                                    message.channel.send(`**Sucess!\n**The emote ${client.emojis.cache.get(emote.id)} has been added!`);
+                                    message.channel.send(`**Success!\n**The emote ${client.emojis.cache.get(emote.id)} has been added!`);
                                 })
                                 .catch((err) => {
                                     if (err.code === 'ETIMEDOUT') {
@@ -139,7 +139,7 @@ export const command: Command = {
                                             message.guild.emojis
                                                 .create(url[2], name)
                                                 .then((emote) => {
-                                                    message.channel.send(`**Sucess!\n**The emote ${client.emojis.cache.get(emote.id)} has been added!`);
+                                                    message.channel.send(`**Success!\n**The emote ${client.emojis.cache.get(emote.id)} has been added!`);
                                                 })
                                                 .catch((err) => {
                                                     if (err.code === 'ETIMEDOUT') {
